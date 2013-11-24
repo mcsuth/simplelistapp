@@ -28,3 +28,6 @@ group :production do
  group :development do
      gem 'sqlite3'
  end
+
+
+ gem 'heroku'
