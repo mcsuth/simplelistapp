@@ -16,5 +16,5 @@
 //= require classie.js
 //= require css-filters-polyfill.js
 //= require cssParser.js
-//= require modalEffect.js
+//= require modalEffects.js
 //= require modernizr.custom.js
