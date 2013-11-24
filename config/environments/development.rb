@@ -36,5 +36,5 @@ TodoApp::Application.configure do
   config.assets.debug = true
 
   # DEVISE
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'simple-list.herokuapp.com' }
 end
