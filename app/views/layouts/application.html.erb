@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TodoApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- DEVISE LOGIN -->
+<div id="devise">
+  <%= notice %> <%= alert %>&nbsp;
+  <% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> |
+    <%= link_to "Login", new_user_session_path %>&nbsp;&nbsp;&nbsp;&nbsp;s
+  <% end %>
+  <!-- DEVISE FLASH ERROR MESSAGES -->
+</div>
+
+
+<%= yield %>
+
+
+<!-- MODAL -->
+<script src="/assets/javascript/classie.js"></script>
+<script src="assets/modalEffects.js"></script>
+
+<!-- for the blur effect -->
+<script>
+    // this is important for IEs
+    var polyfilter_scriptpath = '/assets/javascript/css-filters-polyfill.js';
+</script>
+<script src="/assets/javascript/cssParser.js"></script>
+<script src="/assets/javascript/css-filters-polyfill.js"></script>
+</body>
+</html>

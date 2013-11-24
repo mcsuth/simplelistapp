@@ -1,0 +1,57 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: #e74c3c;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+div#center {
+  width: 400px;
+  margin: 0 auto;
+}
+h1{
+  background: #c0392b;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-align: center;
+}
+img {
+  width: 350px;
+  height: auto;
+}
+div#devise {
+  text-align: right;
+  background: #c0392b;
+  width: 500px;
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  padding: 7px;
+}
+input, button {
+  background: #c0392b;
+  padding: 10px;
+  font-size: 12px;
+  border: 0px;
+  color: #FFF;
+}
+p {
+  background: #c0392b;
+  padding: 10px;
+}
+p:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 12px;
+}

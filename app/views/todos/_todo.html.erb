@@ -1,0 +1,4 @@
+<p data-id="<%= todo.id %>">
+  <%= todo.item.upcase %><br>
+  <%= link_to "remove", todo_path(todo), :method => "delete", :remote => true %>
+</p>

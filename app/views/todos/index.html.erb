@@ -1,0 +1,49 @@
+<div id="center">
+<center>
+  <br><br><img src="/assets/city.png"><br>
+  <h1>
+    SIMPLE LIST
+  </h1>
+</center>
+
+<% if !user_signed_in? %>
+<div id="info">
+<p><i>ABOUT</i><br>This is a simple RoR "To Do" app. The "Devise" gem was used to implement the sign-in/sign-up portion, javaScript and jQuery were used to make the application unobtrusive and asynchronous, and a tutorial from "Tympanus" was used to create the modal. I wasn't quite sure how to use Devise with the modal tutorial.</p>
+<p><i>How to Use:</i><br>Create an account and press on the "Add Items To Do" button to add something to your "To Do" list!</p>
+</div>
+<% end %>
+<% if user_signed_in? %>
+<!-- MODAL BUTTON TO POPUP -->
+<center>
+  <button class="md-trigger" data-modal="modal-7">Add Items To Do</button>
+</center>
+
+<!-- DIV THAT ITEMS APPEND TO -->
+  <div id="thingsToDo">
+    <% @todos.reverse.each do |todo| %>
+      <p data-id="<%= todo.id %>">
+        <%= todo.item.upcase %><br>
+        <%= link_to "remove", todo_path(todo), :method => "delete", :remote => true %>
+      </p>
+    <% end %>
+  </div>
+
+<!-- MODAL POPUP TO ADD TO TODO LIST-->
+      <div class="md-modal md-effect-7" id="modal-7">
+        <div class="md-content">
+          <h3>Something You Need to Do</h3>
+          <div>
+            <center>
+              <%= form_for @todo, :remote => true do |f| %>
+                <%= f.text_field :item, placeholder: "i.e. Laundry" %>
+                <%= f.hidden_field :user_id, value: current_user.id %>
+                <%= f.button "Add", class: "md-close" %>
+              <% end %>
+            </center>
+          </div>
+        </div>
+      </div>
+
+  <div class="md-overlay"></div><!-- the overlay element -->
+<% end %>
+</div>
