@@ -5,3 +5,9 @@ This is a simple RoR "To Do" app. The "Devise" gem was used to implement the sig
 == How to Use:
 
 Create an account and press on the "Add Items To Do" button to add something to your "To Do" list!
+
+== On Heroku
+
+http://simple-list.herokuapp.com/
+
+:)
