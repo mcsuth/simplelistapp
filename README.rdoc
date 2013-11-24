@@ -1,7 +1,7 @@
-# ABOUT
+== ABOUT
 
 This is a simple RoR "To Do" app. The "Devise" gem was used to implement the sign-in/sign-up portion, javaScript and jQuery were used to make the application unobtrusive and asynchronous, and a tutorial from "Tympanus" was used to create the modal. I wasn't quite sure how to use Devise with the modal tutorial.
 
-# How to Use:
+== How to Use:
 
 Create an account and press on the "Add Items To Do" button to add something to your "To Do" list!
