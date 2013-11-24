@@ -61,6 +61,6 @@ module TodoApp
 
 
     # DEVISE FOR HEROKU
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
   end
 end
