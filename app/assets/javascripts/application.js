@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+//= require classie.js
+//= require css-filters-polyfill.js
+//= require cssParser.js
+//= require
+//= require modalEffect.js
+//= require modernizr.custom.js
