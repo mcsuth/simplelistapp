@@ -3,7 +3,7 @@
 <head>
   <title>TodoApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -27,15 +27,15 @@
 
 
 <!-- MODAL -->
-<script src="/assets/javascript/classie.js"></script>
-<script src="assets/modalEffects.js"></script>
+<script src="/assets/classie.js"></script>
+<script src="/assets/modalEffects.js"></script>
 
 <!-- for the blur effect -->
 <script>
     // this is important for IEs
-    var polyfilter_scriptpath = '/assets/javascript/css-filters-polyfill.js';
+    var polyfilter_scriptpath = '/assets/css-filters-polyfill.js';
 </script>
-<script src="/assets/javascript/cssParser.js"></script>
-<script src="/assets/javascript/css-filters-polyfill.js"></script>
+<script src="/assets/cssParser.js"></script>
+<script src="/assets/css-filters-polyfill.js"></script>
 </body>
 </html>
